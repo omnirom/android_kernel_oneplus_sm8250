@@ -5819,7 +5819,8 @@ static int dsi_display_set_mode_sub(struct dsi_display *display,
 				} else {
 					rc = dsi_phy_set_timing_params(ctrl->phy,
 						priv_info->phy_timing_val,
-						priv_info->phy_timing_len);
+						priv_info->phy_timing_len,
+                        commit_phy_timing);
 				}
 				if (rc)
 					DSI_ERR("Fail to add timing params\n");
